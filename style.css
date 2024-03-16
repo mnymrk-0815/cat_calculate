@@ -1,0 +1,305 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background: #FFE5EA;
+    font-size: 1.8rem;
+    line-height: 1.6;
+    color: #444;
+}
+
+h1,
+h2 {
+    font-family: 'Potta One', system-ui;
+    color: #444;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2.4rem;
+    margin-bottom: 16px;
+}
+
+p {
+    font-size: 1.8rem;
+    line-height: 1.6;
+    margin-top: 8px;
+}
+
+span {
+    display: none;
+}
+
+header {
+    width: 100%;
+    height: 72px;
+    background: #FFE5EA;
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+}
+
+.header-container {
+    width: min(100%, 1040px);
+    height: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.header-container-img {
+    width: 20%;
+    height: 100%;
+}
+
+header img {
+    display: block;       
+    height: 100%;
+    padding: 15px 0 0 48px;   
+}
+
+header h1 {
+    width: 80%;
+    line-height: 72px;
+}
+
+main {    
+    background: #fff;
+    width: min(100%, 1040px);
+    margin: 56px auto 0;
+    padding: 40px;
+}
+
+section {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+section+section {
+    margin-top: 72px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;  
+    align-items: center;
+}
+
+.right {
+    flex-direction: row-reverse;
+}
+
+.item-form,
+.item-form-right {
+    width: 60%;
+}
+
+.item-form-right {
+    padding-left: 20%;
+}
+
+input {
+    margin: 8px 8px 0 8px;
+    padding-left: 4px;
+}
+
+
+[type="text"] {
+    border: 1px solid #c2c2c2;
+    border-radius: 4px;
+    height: 36px;
+}
+
+select {  
+    border: 1px solid #c2c2c2;
+    border-radius: 4px;
+    height: 36px;
+}
+
+button {  
+    border: 1px solid #dc3545;
+    border-radius: 4px;
+    background: #fff;
+    height: 36px;
+    margin-top: 8px;
+    padding: 8px;
+    color: #dc3545;
+    font-size: 1.6rem;
+    line-height: 1;
+}
+
+button:hover {
+    background: #dc3545;
+    color: #fff;
+    transition: 0.5s;
+}
+
+footer {
+    background: #eee;
+    height: 128px;
+    text-align: center;
+    line-height: 128px;
+}
+
+
+@media screen and (max-width:792px) {
+
+    body {
+        font-size: 1.6rem;
+        line-height: 1.4; 
+    }   
+
+    h1 {
+        font-size: 2.2rem;
+    }
+    
+    h2 {
+        font-size: 1.8rem;
+        margin-bottom: 8px;
+    }
+    
+    p {
+        font-size: 1.6rem;
+        line-height: 1.6;
+        margin-top: 8px;
+    }
+
+    header img {
+        width: 100%;
+        height: 80%;
+        padding: 0;
+        margin-top: 12px;
+    }
+}
+
+
+@media screen and (max-width:576px) {
+
+    h1 {
+        font-size: 2rem;
+    }
+    
+    header {
+        width:100%;
+        height: 56px;
+    }
+    
+    .header-container {
+        width: min(100%, 576px);
+        height: 100%;
+        margin: auto;
+        display: flex;
+        justify-content: space-around;
+    }
+    
+    .header-container-img {
+        width: 20%;
+        height: 100%;
+        text-align: center;
+
+    }
+    
+    header img {
+        width: 100%;
+        height: 80%;
+        margin-top: 12px;
+        padding: 0;   
+    }
+    
+    header h1 {
+        width: 80%;
+        line-height: 56px;
+    }
+
+    main {
+        width: min(100%, 576px);
+        margin: 56px auto 0;
+        padding: 4px;
+        background: #fff  
+    }
+
+    section {
+         margin-left: auto;
+        margin-right: auto;
+    }
+    
+    section+section {
+        margin-top: 48px;
+    }  
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .item-form,
+    .item-form-right {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .item-img {
+        width: 100%;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+
+    .item-form-right {
+        padding: 0;
+    }
+}
+
+@media screen and (max-width:564px) {
+    span {
+        display: block;
+    }
+
+  .header-container {
+        width: min(100%, 564px);
+    }    
+    
+    header img {
+        height: 100%;
+    }
+    
+    header h1 {
+          line-height: 0.7;
+        padding: 4px 0 0 24px;
+    }
+
+    
+    section {
+         margin-left: auto;
+        margin-right: auto;
+    }
+    
+    section+section {
+        margin-top: 48px;
+    }  
+
+    .item-form,
+    .item-form-right {
+        width: 90%;
+        margin: 0 auto;
+    }
+  
+
+}
+
+
+

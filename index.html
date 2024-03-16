@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>猫飼いさんのための、あれこれ計算するページ</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Potta+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <div class="header-container-img">
+                <img src="images/cat_epte (red).svg" alt="黒猫さんの絵" srcset="">
+            </div>
+            <h1>猫飼いさんのための、<span><br></span>
+                あれこれ計算するページ</h1>
+        </div>
+    </header>
+
+    <main>
+
+        <!--一日の必要摂取カロリー   -->
+        <section id="carory">
+            <div class="container">
+                <div class="item-form">
+                    <h2>猫の一日の必要摂取カロリーを計算</h2>
+                    <p>猫ちゃんの年齢を選択してください</p>
+                    <form name="form2">
+                        <input type="radio" name="radio1" id="kitten" value="kitten">
+                        <label for="kitten">１歳未満</label><br>
+                        <input type="radio" name="radio1" id="OneToSix" value="OneToSix">
+                        <label for="OneToSix">１歳～6歳</label><br>
+                        <input type="radio" name="radio1" id="SevenToTen" value="SevenToTen">
+                        <label for="SevenToTen">７歳～10歳</label><br>
+                        <input type="radio" name="radio1" id="senior" value="senior">
+                        <label for="senior">11歳以上</label>
+                    </form>
+                    <form name="form4" id="form4">
+                        <label for="weight2">猫ちゃんの体重<input type="text" name="weight2" id="weight2"
+                                placeholder="例）4.2">キロ</label>
+                    </form>
+
+                    <button type="button" id="calcCarory">計算</button>
+                    <button type="button" id="caroryClear">クリア</button>
+                    <p class="caroryAnswer"></p>
+                </div>
+
+                <div class="item-img">
+                    <img src="./images/friends.svg" alt="" width="250" height="200">
+                </div>
+            </div>
+        </section>
+
+
+        <!--ごはんの種類からカロリーを計算  -->
+        <section id="food">
+            <div class="container right">
+                <div class="item-form-right">
+                    <h2>今日食べたごはんのカロリーを計算</h2>
+                    <form name="form5" id="form5">
+                        ごはんの種類を選択してください。<br>
+                        <input type="radio" name="foodtype" id="kidney" value="0"><label for="kidney">腎臓療法食</label>
+                        <input type="radio" name="foodtype" id="complete" value="1"><label for="complete">総合栄養食</label>
+                        <input type="radio" name="foodtype" id="general" value="2"><label for="general">一般食</label><br>
+                    </form>
+                    <select name="wetfood" id="wetfood"></select>
+                    <form action="" name="form6" id="form6">
+                        </label> <input type="text" name="gram" id="gram" placeholder="例）40"> <label for="gram">グラム</label>
+                    </form>
+
+                    <button id="btn-food">計算</button>
+                    <button id="btn-food-reset">クリア</button>
+                    <p id="result"></p>
+                </div>
+                <div class="item-img">
+                    <img src="images/calculator.svg" alt="電卓の絵" width="250" height="200">
+                </div>
+            </div>
+        </section>
+
+
+        <!--  クイズ   -->
+        <section id="quiz">
+            <div class="container">
+               
+
+                <div class="item-form">
+                    <h2>＜クイズ・猫の飲水量を増やすには？＞</h2>
+
+                    <p>食事から摂取するだけでは足りない水分量を補うには、猫ちゃんにたくさんお水を飲んでもらう必要があります。
+                        <br> 猫の飲水量を増やすための工夫として、よく行われているものはどれでしょうか？
+                    </p>
+                    <form name="form3">
+                        <input type="radio" name="radio2" id="a" value="a">
+                        <label for="a">A.常に冷たい水を用意する</label><br>
+                        <input type="radio" name="radio2" id="b" value="b">
+                        <label for="b">B.ごはんとお水のお皿を離して置く</label><br>
+                        <input type="radio" name="radio2" id="c" value="c">
+                        <label for="c">C.大きなお皿を使う</label>
+                    </form>
+
+                    <button type="button" id="quizAnswer">答えを見る</button>
+                    <button type="button" id="quizClear">やり直す</button>
+
+                    <p class="correct" style="display: none;">
+                        <strong>【正解】B.ごはんとお水のお皿を離して置く</strong>
+                        <br> 猫は本能的に餌場の近くにある水を避けるといわれています。
+                        <br> だまされたと思って試してみてください。
+                    </p>
+                    <p class="wrong" style="display: none;">
+                        <strong>【不正解】</strong>
+                        <br>もう一度どうぞ！
+                    </p>
+                </div>
+                <div class="item-img">
+                    <img src="./images/playful_cat.svg" alt="遊ぶ黒猫さんの絵" width="250" height="86">
+                </div>
+            </div>
+        </section>
+
+        <!--水分量計算   -->
+        <section id="water">
+            <div class="container">
+                <div class="item-form">
+                <h2>猫の一日の必要水分摂取量を計算</h2>
+                    <p>以下に入力してください。</p>
+
+                    <form name="form1" id="form1">
+                        <label for="weight" class="form-label">猫ちゃんの体重</label>
+                        <input type="text" name="weight" id="weight"
+                                placeholder="例）4.2">キロ<br>
+
+                        <label for="dry">今日食べたドライフード</label>
+                        <input type="text" name="dry" id="dry" placeholder="例）40">グラム<br>
+                    <label for="wet">今日食べたウェットフード</label>
+                    <input type="text" name="wet" id="wet" placeholder="例）80">グラム<br>
+                    <label for="churu" class="form-label">今日食べたちゅーる</label>
+                    <input type="text" name="churu" id="churu" placeholder="例）1">本<br>
+                    </form>
+                    <button type="button" id="calcWater">計算</button>
+                    <button type="button" id="waterClear">クリア</button>
+                    <p class="waterAnswer"></p>
+                </div>
+                <div class="item-img">
+                    <img src="images/pet_adoption.svg" alt="猫さんをお迎えする絵" width="250" height="200">
+                </div>
+            </div>
+
+
+        </section>
+
+        <article>
+
+        </article>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </main>
+
+
+
+
+
+    <footer>
+        &copy; 猫飼いさんのための、あれこれ計算するページ
+    </footer>
+
+
+    <script src="main.js"></script>
+
+</body>
+
+</html>
